@@ -36,9 +36,9 @@ function updateForm(register) {
     // Si register est false, affiche le formulaire de connexion
     formContainer.innerHTML = `
       <h1>Connexion</h1>
-      <form class="flex" id="login-form">
+      <form action="/api/auth/login" method="POST" class="flex" id="login-form">
         <input type="text" placeholder="Username" name="username" />
-        <input type="password" placeholder="Password" name="password" />
+        <input type="text" placeholder="Email" name="email" />
         <button type="submit" class="btn btn-primary">Connexion</button>
         <button type="button" class="btn btn-secondary register-link" id="register-link">S'inscrire</button>
       </form>
