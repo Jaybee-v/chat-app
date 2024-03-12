@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use((req, res) => {
   // demande de rendu EJS
-  res.render("pages/home", { user: { name: "Jean-Baptiste" } }); // on donne le chemin dans views, et on omet le .ejs
+  res.render("home", { title: "Bienvenue sur Chat-App" }); // on donne le chemin dans views, et on omet le .ejs
 });
 
 module.exports = app;
