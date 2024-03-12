@@ -11,8 +11,18 @@ class AuthController {
         req.session.user = user;
       }
       console.log("User logged in", user);
-      res.redirect("/dashboard");
+      res.redirect("/");
       // res.status(200).json({ token });
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  async disconnect(req, res, next) {
+    try {
+      if (req.session && req.session.user !== undefined)
+        req.session.user = undefined;
+      res.redirect("/");
     } catch (error) {
       next(error);
     }

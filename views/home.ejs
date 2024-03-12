@@ -10,6 +10,9 @@
     <div class="card">
       <% if (typeof user !== 'undefined') { %>
       <h1>Hello <%= user.username %></h1>
+      <form action="/api/auth/logout" method="get">
+        <input type="submit" class="btn btn-delete" value="Déconnexion" />
+      </form>
       <% } else { %>
 
       <h1><%= title %></h1>
